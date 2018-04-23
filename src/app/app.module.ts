@@ -5,11 +5,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 
+import { AppRoutingModule } from './app-routing.module';
+
+
+import { QueryComponent } from './query/query.component';
+
+
 @NgModule({
   declarations: [
+    QueryComponent,
     AppComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule
   ],
   providers: [],
