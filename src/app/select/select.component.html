@@ -1,26 +1,70 @@
 <div>
 
-  <div class="row">
-    <div class="col-md-3">
-      <label>select</label>
-      <select style="width:150px;" [(ngModel)]="selectedCity">
-        <option *ngFor="let item of cityList">{{item}}</option>
-      </select>
-    </div>
-    <div class="col-md-5">
-      <label>Selected City</label>
-      <input type="text" [value]="selectedCity" />
-    </div>
-  </div>
+  <fieldset>
+    <legend>普通select</legend>
+    <content>
+      <div>
+        更新数据源时，显示第一个选项，但不会绑定到 ngModel
+      </div>
 
-  <div class="row">
-    <div class="col-md-6  ">
-      <button (click)="bindCityOfSiChuan()">Si Chuan</button>
-      <button (click)="bindCityOfGuiZhou()">Gui Zhou</button>
-    </div>
-  </div>
+      <div class="row">
+        <div class="col-md-3">
+          <select style="width:150px;" [(ngModel)]="selectedNormalCity">
+            <option *ngFor="let item of cityList">{{item}}</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+          <label>ngModel</label>
+          <input type="text" [value]="selectedNormalCity" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6  ">
+          <button (click)="updateDataSource()">更新数据源</button>
+        </div>
+      </div>
 
 
+    </content>
+  </fieldset>
+
+
+
+
+  <br />
+  <br />
+
+
+  <fieldset>
+    <legend>特别处理的 select</legend>
+    <content>
+      <div>
+        更新数据源时，显示空白
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <select style="width:150px;" [(ngModel)]="selectedNormalCity">
+            <option selected="selected" style='display: none'></option>
+            <option *ngFor="let item of cityList">{{item}}</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+          <label>ngModel</label>
+          <input type="text" [value]="selectedNormalCity" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6  ">
+          <button (click)="updateDataSource()">更新数据源</button>
+        </div>
+      </div>
+
+
+    </content>
+  </fieldset>
 
 
 

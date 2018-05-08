@@ -28,15 +28,16 @@ export class SelectComponent implements OnInit {
     this.selectedCity = "";
   }
 
-  bindCityOfSiChuan() {
-    this.cityList = this.cityListOfSiChuan;
-  }
 
+  updateDataSource() {
+    if (this.cityList == this.cityListOfGuiZhou) {
+      this.cityList = this.cityListOfSiChuan;
+    }
 
-  bindCityOfGuiZhou() {
-    this.cityList = this.cityListOfGuiZhou;
+    else if (this.cityList == this.cityListOfSiChuan) {
+      this.cityList = this.cityListOfGuiZhou;
+    }
   }
-   
 
 
 }
