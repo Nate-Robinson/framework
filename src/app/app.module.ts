@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QueryComponent } from './query/query.component';
 import { SelectComponent } from './select/select.component';
+import { ModifyUrlComponent } from './modify-url/modify-url.component';
 
 
 @NgModule({
   declarations: [
     QueryComponent,
     SelectComponent,
+    ModifyUrlComponent,
     AppComponent
   ],
   imports: [
