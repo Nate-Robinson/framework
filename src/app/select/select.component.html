@@ -1,22 +1,27 @@
 <div>
 
   <div class="row">
-    <div class="col-md-6 text-right">
+    <div class="col-md-3">
       <label>select</label>
       <select style="width:150px;" [(ngModel)]="selectedCity">
         <option *ngFor="let item of cityList">{{item}}</option>
       </select>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-5">
       <label>Selected City</label>
       <input type="text" [value]="selectedCity" />
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6 text-right">
+    <div class="col-md-6  ">
       <button (click)="bindCityOfSiChuan()">Si Chuan</button>
       <button (click)="bindCityOfGuiZhou()">Gui Zhou</button>
     </div>
   </div>
+
+
+
+
+
 </div>

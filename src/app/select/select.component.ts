@@ -35,7 +35,8 @@ export class SelectComponent implements OnInit {
 
   bindCityOfGuiZhou() {
     this.cityList = this.cityListOfGuiZhou;
-
   }
+   
+
 
 }
